@@ -1,5 +1,6 @@
-#This code runs a random number generator guessing game in the terminal. It gives various hints in regard to guess correctness.
+#This program runs a random number generator guessing game in the terminal. It gives various hints in regard to guess correctness.
 
+#This program is unfinished - need to add code to allow number to be retained between guesses, so further guesses can be entered
 
 import random
 
