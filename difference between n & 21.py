@@ -1,4 +1,4 @@
-#This code returns the difference between n & 21.
+#This function returns the difference between n & 21.
 #If n is greater than 21, it will return the difference doubled.
 
 def diff21(n):
