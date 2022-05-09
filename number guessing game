@@ -42,7 +42,5 @@ else:
     
 #digits = str(digits[0]) + str(digits[1]) + str(digits[2])
 
-#while digits != guess:
- #   digits = rng()
 
     
