@@ -1,5 +1,5 @@
 
-#This code returns the number of even integers in an array
+#This function returns the number of even integers in an array
 
 nums = [2, 1, 2, 3, 4]
 
