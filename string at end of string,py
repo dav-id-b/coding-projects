@@ -1,4 +1,4 @@
-#This code returns True if either one of two strings at the very end of the other, ignoring letter case. 
+#This code determines if either one of two strings is found at the very end of the other, ignoring letter case. 
 
 a = 'Hiabc'
 
