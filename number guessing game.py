@@ -1,6 +1,5 @@
 #This program runs a random number generator guessing game in the terminal. It gives various hints in regard to guess correctness.
 
-#This program is unfinished - need to add code to allow number to be retained between guesses, so further guesses can be entered
 
 import random
 
@@ -10,7 +9,6 @@ def rng():
     digits = list(range(10))
     random.shuffle(digits)
     digistr = str(digits[0]) + str(digits[1]) + str(digits[2])
-    print(digistr)
     return digistr
 
 guess = input("Please guess a 3 digit number:")
@@ -33,19 +31,33 @@ if len(guess) != 3:
 elif guess[0] not in allowchar or guess [1] not in allowchar or guess [2] not in allowchar:
     print("Numerical values only, please!")
     
-#The following lines of code determine if any, all, or none of the digits input by the user match the rng
+#The following lines of code determine if any, all, or none of the digits input by the user match the rng and will allow the user to continue to guess until successful
 
-elif digits == guess:
-    print("Congratulations! You got all three numbers in the correct positions!")
+while digits != guess:
+    
+    allowchar = {'0' : 0, '1' : 1, '2' : 2, '3' : 3, '4' : 4, '5' : 5, '6' : 6, '7' : 7, '8' : 8, '9' : 9 }
 
-elif guess[0] in digits or guess[1] in digits or guess[2] in digits:
-    print('Close: You\'ve guessed a correct number but in the wrong position')
+    if len(guess) != 3:
+        print("Please limit your guess to 3 characters!")
 
-elif digits[0] == guess[0] or digits[1] == guess[1] or digits[2] == guess[2]:
-       print ('Match: You\'ve guessed a correct number in the correct position') 
+    elif guess[0] not in allowchar or guess [1] not in allowchar or guess [2] not in allowchar:
+        print("Numerical values only, please!")
 
-else:
-    print('Nope: You haven\'t guess any of the numbers correctly')
+    elif digits[0] == guess[0] or digits[1] == guess[1] or digits[2] == guess[2]:
+        print ('Match: You\'ve guessed a correct number in the correct position')
+    
+    elif guess[0] in digits or guess[1] in digits or guess[2] in digits:
+        print('Close: You\'ve guessed a correct number but in the wrong position')
+
+    elif digits[0] == guess[0] or digits[1] == guess[1] or digits[2] == guess[2]:
+        print ('Match: You\'ve guessed a correct number in the correct position') 
+
+    else:
+        print('Nope: You haven\'t guess any of the numbers correctly')
+
+    guess = input('Please guess again:')
+
+print("Congratulations! You got all three numbers in the correct positions!")
     
 
 
