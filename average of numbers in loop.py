@@ -8,7 +8,7 @@ total = 0
 print('Beginning', count, total)
 
 for num in [3, 5, 12, 23, 54, 7, 56, 23, 6, 1]:
-    count = count + 1
+    count += 1
     total = total + num 
     print(count, total, num)
 
