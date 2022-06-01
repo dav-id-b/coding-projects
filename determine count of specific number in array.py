@@ -7,6 +7,6 @@ def array_count(nums):
   
   for desired in nums:
     if desired == 7:
-      count = count + 1
+      count += 1
       
   return count
