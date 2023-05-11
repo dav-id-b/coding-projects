@@ -11,7 +11,7 @@ question = input('Please ask your question: ')
 #This will print out a combination of the user's name and their question in a readable format
 print(name + ' ' + 'asks' +': ' + question)
 
-#This line contains all of the possible answers to the user's question
+#This line contains all of the possible answers to the user's question. Need to add functionality for "try again prompt" 
 answertuple = {'Yes - definitely.', 'It is decidedly so.', 'Without a doubt.', 'Reply hazy, try again.', 'Ask again later.', 'Better not tell you now.', 'My sources say no.', 'Outlook not so good.', 'Very doubtful.'}
 
 #This will randomly select an answer from the previous line of code
